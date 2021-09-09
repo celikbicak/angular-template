@@ -1,23 +1,15 @@
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-
-interface IHttpService {
-  makeGetRequest<T>(url: string): Observable<T>;
-
-  makePostRequest<T>(url: string, body: any): Observable<T>;
-
-  makePutRequest<T>(url: string, body: any): Observable<T>;
-
-  makeDeleteRequest<T>(url: string, body?: any): Observable<T>;
-
-  makePatchRequest<T>(url: string, body?: any): Observable<T>;
-}
+import { catchError, map } from 'rxjs/operators';
+import { HttpErrorHandler } from '../http-error-handler/http-error-handler.service';
 
 @Injectable({ providedIn: 'root' })
-export class HttpService implements IHttpService {
-  constructor(private http: HttpClient) {}
+export class HttpService {
+  constructor(
+    private http: HttpClient,
+    private httpErrorHandler: HttpErrorHandler
+  ) {}
 
   public makeGetRequest<T>(url: string): Observable<T> {
     return this.http
@@ -33,7 +25,8 @@ export class HttpService implements IHttpService {
             return null;
           }
         })
-      );
+      )
+      .pipe(catchError((error) => this.httpErrorHandler.handleError(error)));
   }
 
   public makePostRequest<T>(url: string, body: any): Observable<T> {
@@ -50,7 +43,8 @@ export class HttpService implements IHttpService {
             return null;
           }
         })
-      );
+      )
+      .pipe(catchError((error) => this.httpErrorHandler.handleError(error)));
   }
 
   public makePutRequest<T>(url: string, body: any): Observable<T> {
@@ -67,7 +61,8 @@ export class HttpService implements IHttpService {
             return null;
           }
         })
-      );
+      )
+      .pipe(catchError((error) => this.httpErrorHandler.handleError(error)));
   }
 
   public makeDeleteRequest<T>(url: string, body?: any): Observable<T> {
@@ -85,7 +80,8 @@ export class HttpService implements IHttpService {
             return null;
           }
         })
-      );
+      )
+      .pipe(catchError((error) => this.httpErrorHandler.handleError(error)));
   }
 
   public makePatchRequest<T>(url: string, body?: any): Observable<T> {
@@ -102,7 +98,8 @@ export class HttpService implements IHttpService {
             return null;
           }
         })
-      );
+      )
+      .pipe(catchError((error) => this.httpErrorHandler.handleError(error)));
   }
 
   private createHttpHeaders(): HttpHeaders {
