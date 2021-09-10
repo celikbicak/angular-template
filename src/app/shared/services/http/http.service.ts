@@ -19,11 +19,7 @@ export class HttpService {
       })
       .pipe(
         map((res: HttpResponse<T>) => {
-          if (res.status === 200) {
-            return res.body;
-          } else {
-            return null;
-          }
+          return res.body;
         })
       )
       .pipe(catchError((error) => this.httpErrorHandler.handleError(error)));
@@ -37,11 +33,7 @@ export class HttpService {
       })
       .pipe(
         map((res: HttpResponse<T>) => {
-          if (res.status === 200) {
-            return res.body;
-          } else {
-            return null;
-          }
+          return res.body;
         })
       )
       .pipe(catchError((error) => this.httpErrorHandler.handleError(error)));
@@ -55,11 +47,7 @@ export class HttpService {
       })
       .pipe(
         map((res: HttpResponse<T>) => {
-          if (res.status === 200) {
-            return res.body;
-          } else {
-            return null;
-          }
+          return res.body;
         })
       )
       .pipe(catchError((error) => this.httpErrorHandler.handleError(error)));
@@ -74,11 +62,7 @@ export class HttpService {
       })
       .pipe(
         map((res: HttpResponse<T>) => {
-          if (res.status === 200) {
-            return res.body;
-          } else {
-            return null;
-          }
+          return res.body;
         })
       )
       .pipe(catchError((error) => this.httpErrorHandler.handleError(error)));
@@ -92,11 +76,7 @@ export class HttpService {
       })
       .pipe(
         map((res: HttpResponse<T>) => {
-          if (res.status === 200) {
-            return res.body;
-          } else {
-            return null;
-          }
+          return res.body;
         })
       )
       .pipe(catchError((error) => this.httpErrorHandler.handleError(error)));
