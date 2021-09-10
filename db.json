@@ -1,9 +1,34 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+  "projects": [
+    {
+      "id": 1,
+      "name": "Angular Template",
+      "url": "https://github.com/celikbicak/angular-template"
+    }
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+  "users": [
+    {
+      "id": 1,
+      "name": "Samet ÇELİKBIÇAK",
+      "github": "https://github.com/sametcelikbicak"
+    },
+    {
+      "id": 2,
+      "name": "Caner BEKTAŞ",
+      "github": "https://github.com/canerbektas"
+    }
   ],
-  "profile": { "name": "typicode" }
+  "datas": [
+    {
+      "id": 1,
+      "string": "will change after real data model decision",
+      "number": 12345,
+      "date": "2021-01-01T12:13:14.123Z",
+      "boolean": true,
+      "object": {
+        "id": 1,
+        "name": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      }
+    }
+  ]
 }
