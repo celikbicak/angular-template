@@ -22,7 +22,7 @@ export class HttpService {
       .pipe(catchError((error) => this.httpErrorHandler.handleError(error)));
   }
 
-  public makePostRequest<T>(url: string, body: any): Observable<T> {
+  public makePostRequest<T>(url: string, body: unknown): Observable<T> {
     return this.http
       .post<T>(url, body, {
         headers: this.createHttpHeaders(),
@@ -36,7 +36,7 @@ export class HttpService {
       .pipe(catchError((error) => this.httpErrorHandler.handleError(error)));
   }
 
-  public makePutRequest<T>(url: string, body: any): Observable<T> {
+  public makePutRequest<T>(url: string, body: unknown): Observable<T> {
     return this.http
       .put<T>(url, body, {
         headers: this.createHttpHeaders(),
@@ -50,7 +50,7 @@ export class HttpService {
       .pipe(catchError((error) => this.httpErrorHandler.handleError(error)));
   }
 
-  public makeDeleteRequest<T>(url: string, body?: any): Observable<T> {
+  public makeDeleteRequest<T>(url: string, body?: unknown): Observable<T> {
     return this.http
       .request<T>('delete', url, {
         body,
@@ -65,7 +65,7 @@ export class HttpService {
       .pipe(catchError((error) => this.httpErrorHandler.handleError(error)));
   }
 
-  public makePatchRequest<T>(url: string, body?: any): Observable<T> {
+  public makePatchRequest<T>(url: string, body?: unknown): Observable<T> {
     return this.http
       .patch<T>(url, body, {
         headers: this.createHttpHeaders(),

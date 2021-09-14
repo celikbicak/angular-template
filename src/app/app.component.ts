@@ -1,4 +1,3 @@
-import { identifierModuleUrl } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from './shared/services';
 
@@ -8,7 +7,7 @@ import { HttpService } from './shared/services';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'angular-template';
+  public title = 'angular-template';
 
   constructor(private httpService: HttpService) {}
 
