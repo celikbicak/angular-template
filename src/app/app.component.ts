@@ -1,4 +1,3 @@
-import { identifierModuleUrl } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from './shared/services';
 
@@ -8,7 +7,7 @@ import { HttpService } from './shared/services';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'angular-template';
+  public title = 'angular-template';
 
   constructor(private httpService: HttpService) {}
 
@@ -18,7 +17,7 @@ export class AppComponent implements OnInit {
       .subscribe((response) => console.log('Get users:', response));
 
     return;
-    
+
     setTimeout(() => {
       const newId = Math.floor(Math.random() * 1000);
       const body = {
@@ -29,9 +28,7 @@ export class AppComponent implements OnInit {
 
       this.httpService
         .makePostRequest('http://localhost:3000/projects', JSON.stringify(body))
-        .subscribe((response) =>
-          console.log('Post request response:', response)
-        );
+        .subscribe((response) => console.log('Post request response:', response));
     }, 3000);
 
     setTimeout(() => {
