@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { HttpLoaderFactory } from './shared/factories';
 import { LogInterceptor } from './shared/interceptors';
 import { FormattedDatePipe } from './shared/pipes';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, FormattedDatePipe],
+  declarations: [AppComponent, FormattedDatePipe, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
