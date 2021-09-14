@@ -17,6 +17,8 @@ export class AppComponent implements OnInit {
       .makeGetRequest('http://localhost:3000/users')
       .subscribe((response) => console.log('Get users:', response));
 
+    return;
+    
     setTimeout(() => {
       const newId = Math.floor(Math.random() * 1000);
       const body = {
