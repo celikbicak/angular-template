@@ -6,6 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "build:ci": "ng build --configuration production --verbose=false --progress=false",
+    "test:ci": "ng test --karma-config karma.conf-ci.js --progress=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev": "json-server --watch db.json & ng serve"
