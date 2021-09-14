@@ -6,10 +6,7 @@ import { HttpErrorHandler } from '../http-error-handler/http-error-handler.servi
 
 @Injectable({ providedIn: 'root' })
 export class HttpService {
-  constructor(
-    private http: HttpClient,
-    private httpErrorHandler: HttpErrorHandler
-  ) {}
+  constructor(private http: HttpClient, private httpErrorHandler: HttpErrorHandler) {}
 
   public makeGetRequest<T>(url: string): Observable<T> {
     return this.http

@@ -1,7 +1,4 @@
-import {
-  HttpClientTestingModule,
-  HttpTestingController,
-} from '@angular/common/http/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpService } from './http.service';
@@ -92,12 +89,10 @@ describe('HttpService', () => {
     });
 
     it('it should be able to update values from the API via PATCH', () => {
-      service
-        .makePatchRequest('/data/1', '')
-        .subscribe((values: TestData[]) => {
-          expect(values.length).toBe(2);
-          expect(values).toEqual(testDatas);
-        });
+      service.makePatchRequest('/data/1', '').subscribe((values: TestData[]) => {
+        expect(values.length).toBe(2);
+        expect(values).toEqual(testDatas);
+      });
       const request = httpMock.expectOne('/data/1');
       expect(request.request.method).toBe('PATCH');
       request.flush(testDatas);

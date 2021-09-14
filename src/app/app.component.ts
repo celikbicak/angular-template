@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
       .subscribe((response) => console.log('Get users:', response));
 
     return;
-    
+
     setTimeout(() => {
       const newId = Math.floor(Math.random() * 1000);
       const body = {
@@ -29,9 +29,7 @@ export class AppComponent implements OnInit {
 
       this.httpService
         .makePostRequest('http://localhost:3000/projects', JSON.stringify(body))
-        .subscribe((response) =>
-          console.log('Post request response:', response)
-        );
+        .subscribe((response) => console.log('Post request response:', response));
     }, 3000);
 
     setTimeout(() => {
