@@ -24,6 +24,7 @@
     "@angular/router": "~12.2.5",
     "enum2array": "^1.1.14",
     "json-server": "^0.16.3",
+    "moment": "^2.29.1",
     "rxjs": "~6.6.0",
     "storage-function": "^2.1.2",
     "tslib": "^2.0.0",
