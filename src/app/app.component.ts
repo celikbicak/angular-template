@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { HttpService } from './shared/services';
 
 @Component({
@@ -13,7 +14,7 @@ export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
     this.httpService
-      .makeGetRequest('http://localhost:3000/users')
+      .makeGetRequest(`${environment.apiBaseUrl}/users`)
       .subscribe((response) => console.log('Get users:', response));
 
     return;
@@ -27,13 +28,13 @@ export class AppComponent implements OnInit {
       };
 
       this.httpService
-        .makePostRequest('http://localhost:3000/projects', JSON.stringify(body))
+        .makePostRequest(`${environment.apiBaseUrl}/projects`, JSON.stringify(body))
         .subscribe((response) => console.log('Post request response:', response));
     }, 3000);
 
     setTimeout(() => {
       this.httpService
-        .makeGetRequest('http://localhost:3000/projects')
+        .makeGetRequest(`${environment.apiBaseUrl}/projects`)
         .subscribe((response) => console.log('Projects Response:', response));
     }, 5000);
   }
