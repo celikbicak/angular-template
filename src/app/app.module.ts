@@ -6,15 +6,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpLoaderFactory } from './shared/factories';
 import { LogInterceptor } from './shared/interceptors';
-import { FormattedDatePipe } from './shared/pipes';
 import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [AppComponent, FormattedDatePipe, HomeComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    SharedModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

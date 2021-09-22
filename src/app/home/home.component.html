@@ -1,1 +1,9 @@
-<p>home works!</p>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav>
+    <button mat-button (click)="sidenav.toggle()">Toggle</button>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <button mat-button (click)="sidenav.toggle()">Toggle</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
