@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
 import { HttpService } from './shared/services';
 
@@ -8,9 +9,10 @@ import { HttpService } from './shared/services';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  public title = 'angular-template';
-
-  constructor(private httpService: HttpService) {}
+  constructor(private httpService: HttpService, private translateService: TranslateService) {
+    this.translateService.addLangs(['tr', 'en']);
+    this.translateService.use('tr');
+  }
 
   public ngOnInit(): void {
     this.httpService
@@ -37,5 +39,11 @@ export class AppComponent implements OnInit {
         .makeGetRequest(`${environment.apiBaseUrl}/projects`)
         .subscribe((response) => console.log('Projects Response:', response));
     }, 5000);
+  }
+
+  public changeLanguage(): void {
+    console.log('Active language:', this.translateService.currentLang);
+
+    this.translateService.use(this.translateService.currentLang === 'tr' ? 'en' : 'tr');
   }
 }

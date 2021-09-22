@@ -342,9 +342,9 @@
 
 <div class="content" role="main">
   <!-- Highlight Card -->
-  <div class="card highlight-card card-small">
+  <div class="card highlight-card card-small" (click)="changeLanguage()">
     <svg id="rocket" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
-      <title>Rocket Ship</title>
+      <title>Rocket Ship, Click for language change</title>
       <g id="Group_83" data-name="Group 83" transform="translate(-141 -696)">
         <circle
           id="Ellipse_8"
@@ -374,7 +374,7 @@
       </g>
     </svg>
 
-    <span>{{ title }} app is running!</span>
+    <span translate>title</span>
 
     <svg
       id="rocket-smoke"
