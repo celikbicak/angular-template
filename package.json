@@ -22,6 +22,8 @@
     "@angular/platform-browser": "~12.2.5",
     "@angular/platform-browser-dynamic": "~12.2.5",
     "@angular/router": "~12.2.5",
+    "@ngx-translate/core": "^13.0.0",
+    "@ngx-translate/http-loader": "^6.0.0",
     "enum2array": "^1.1.14",
     "json-server": "^0.16.3",
     "moment": "^2.29.1",
