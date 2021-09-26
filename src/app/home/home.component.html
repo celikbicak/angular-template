@@ -1,9 +1,28 @@
-<mat-sidenav-container class="example-container">
+<mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav>
-    <button mat-button (click)="sidenav.toggle()">Toggle</button>
-  </mat-sidenav>
+    <button mat-icon-button (click)="sidenav.toggle()" class="menu-button">
+      <mat-icon>menu_open</mat-icon>
+    </button>
 
+    <mat-list>
+      <div mat-subheader>CRUD</div>
+      <mat-list-item>
+        <button mat-icon-button><mat-icon>add_circle_outline</mat-icon></button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-icon-button><mat-icon>list</mat-icon></button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-icon-button><mat-icon>edit</mat-icon></button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-icon-button><mat-icon>delete_outline</mat-icon></button>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </mat-sidenav>
   <mat-sidenav-content>
-    <button mat-button (click)="sidenav.toggle()">Toggle</button>
+    <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
