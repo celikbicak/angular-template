@@ -3,7 +3,61 @@
     {
       "id": 1,
       "name": "Angular Template",
-      "url": "https://github.com/celikbicak/angular-template"
+      "url": "https://github.com/celikbicak/angular-template",
+      "contributors": [
+        {
+          "name": "Samet ÇELİKBIÇAK",
+          "github": "https://github.com/sametcelikbicak"
+        },
+        {
+          "name": "Caner BEKTAŞ",
+          "github": "https://github.com/canerbektas"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Enum2Array",
+      "url": "https://github.com/sametcelikbicak/enum2array",
+      "contributors": [
+        {
+          "name": "Samet ÇELİKBIÇAK",
+          "github": "https://github.com/sametcelikbicak"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Storage Function",
+      "url": "https://github.com/sametcelikbicak/storage-function",
+      "contributors": [
+        {
+          "name": "Samet ÇELİKBIÇAK",
+          "github": "https://github.com/sametcelikbicak"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Library Workspace",
+      "url": "https://github.com/sametcelikbicak/library-workspace",
+      "contributors": [
+        {
+          "name": "Samet ÇELİKBIÇAK",
+          "github": "https://github.com/sametcelikbicak"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Auto Focus",
+      "url": "https://github.com/sametcelikbicak/library-workspace/tree/main/projects/auto-focus",
+      "contributors": [
+        {
+          "name": "Samet ÇELİKBIÇAK",
+          "github": "https://github.com/sametcelikbicak"
+        }
+      ]
     }
   ],
   "users": [
