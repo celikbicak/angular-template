@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { environment } from "src/environments/environment";
 import { HttpService } from "./shared/services";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: "app-root",
@@ -8,7 +9,10 @@ import { HttpService } from "./shared/services";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
-  constructor(private httpService: HttpService) {}
+  constructor(private httpService: HttpService, private translateService: TranslateService) {
+    this.translateService.addLangs(["tr", "en"]);
+    this.translateService.use("tr");
+  }
 
   public ngOnInit(): void {
     this.httpService
@@ -26,13 +30,8 @@ export class AppComponent implements OnInit {
       };
 
       this.httpService
-        .makePostRequest(
-          `${environment.apiBaseUrl}/projects`,
-          JSON.stringify(body)
-        )
-        .subscribe((response) =>
-          console.log("Post request response:", response)
-        );
+        .makePostRequest(`${environment.apiBaseUrl}/projects`, JSON.stringify(body))
+        .subscribe((response) => console.log("Post request response:", response));
     }, 3000);
 
     setTimeout(() => {
@@ -40,5 +39,9 @@ export class AppComponent implements OnInit {
         .makeGetRequest(`${environment.apiBaseUrl}/projects`)
         .subscribe((response) => console.log("Projects Response:", response));
     }, 5000);
+  }
+
+  public changeLanguage(): void {
+    this.translateService.use(this.translateService.currentLang === "tr" ? "en" : "tr");
   }
 }
