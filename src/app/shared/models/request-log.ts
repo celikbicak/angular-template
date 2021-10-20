@@ -1,4 +1,4 @@
-import { HttpRequest } from '@angular/common/http';
+import { HttpRequest } from "@angular/common/http";
 
 export class RequestLog {
   public readonly requestDate: Date;

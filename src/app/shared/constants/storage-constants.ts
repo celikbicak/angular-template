@@ -1,3 +1,3 @@
 export const StorageConstants = {
-  RequestLogKey: 'req_log',
+  RequestLogKey: "req_log",
 };

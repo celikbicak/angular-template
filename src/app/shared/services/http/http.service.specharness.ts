@@ -6,12 +6,12 @@ export interface TestData {
 export function createTestDatas(): TestData[] {
   return [
     {
-      id: '1',
-      value: 'Value One',
+      id: "1",
+      value: "Value One",
     },
     {
-      id: '2',
-      value: 'Value Two',
+      id: "2",
+      value: "Value Two",
     },
   ];
 }

@@ -8,9 +8,11 @@
     "test": "ng test",
     "build:ci": "ng build --configuration production --verbose=false --progress=false",
     "test:ci": "ng test --karma-config karma.conf-ci.js --progress=false",
-    "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev": "json-server --watch db.json & ng serve"
+    "dev": "json-server --watch db.json & ng serve",
+    "lint": "eslint -c .eslintrc.json --ext .ts,.html,.scss,.css ./",
+    "lint:fix": "eslint -c .eslintrc.json --ext .ts,.html,.scss,.css ./ --fix",
+    "prettier": "./node_modules/.bin/prettier --write '**/*.ts' '**/*.html' '**/*.scss' '**/*.json'"
   },
   "private": true,
   "dependencies": {
