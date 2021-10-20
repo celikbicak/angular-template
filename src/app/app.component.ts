@@ -1,23 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { environment } from 'src/environments/environment';
-import { HttpService } from './shared/services';
+import { Component, OnInit } from "@angular/core";
+import { environment } from "src/environments/environment";
+import { HttpService } from "./shared/services";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
-  constructor(private httpService: HttpService, private translateService: TranslateService) {
-    this.translateService.addLangs(['tr', 'en']);
-    this.translateService.use('tr');
-  }
+  constructor(private httpService: HttpService) {}
 
   public ngOnInit(): void {
     this.httpService
       .makeGetRequest(`${environment.apiBaseUrl}/users`)
-      .subscribe((response) => console.log('Get users:', response));
+      .subscribe((response) => console.log("Get users:", response));
 
     return;
 
@@ -26,24 +22,23 @@ export class AppComponent implements OnInit {
       const body = {
         id: newId,
         name: `Angular Template DB Test ${newId}`,
-        url: 'https://github.com/celikbicak/angular-template',
+        url: "https://github.com/celikbicak/angular-template",
       };
 
       this.httpService
-        .makePostRequest(`${environment.apiBaseUrl}/projects`, JSON.stringify(body))
-        .subscribe((response) => console.log('Post request response:', response));
+        .makePostRequest(
+          `${environment.apiBaseUrl}/projects`,
+          JSON.stringify(body)
+        )
+        .subscribe((response) =>
+          console.log("Post request response:", response)
+        );
     }, 3000);
 
     setTimeout(() => {
       this.httpService
         .makeGetRequest(`${environment.apiBaseUrl}/projects`)
-        .subscribe((response) => console.log('Projects Response:', response));
+        .subscribe((response) => console.log("Projects Response:", response));
     }, 5000);
-  }
-
-  public changeLanguage(): void {
-    console.log('Active language:', this.translateService.currentLang);
-
-    this.translateService.use(this.translateService.currentLang === 'tr' ? 'en' : 'tr');
   }
 }

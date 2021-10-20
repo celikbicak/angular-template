@@ -1,1 +1,1 @@
-export * from './http-loader.factory';
+export * from "./http-loader.factory";

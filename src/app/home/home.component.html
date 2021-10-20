@@ -22,9 +22,17 @@
     </mat-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <button mat-icon-button (click)="sidenav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
+    <div class="header">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span translate>title</span>
+
+      <button mat-icon-button (click)="changeLanguage()">
+        <mat-icon>language</mat-icon>
+      </button>
+    </div>
+
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
