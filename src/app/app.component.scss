@@ -21,12 +21,15 @@
     align-items: end;
   }
 
-  .mat-list-item {
-    padding-left: 2em;
+  .list-item {
     cursor: pointer;
 
     &:hover {
       background-color: #4772a7;
+    }
+
+    .menu-icon {
+      padding-left: 1.5em;
     }
   }
 }
