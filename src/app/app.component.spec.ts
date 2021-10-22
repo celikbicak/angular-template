@@ -1,4 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from "@angular/core";
+import { MatMenuModule } from "@angular/material/menu";
 import { AppComponent } from "./app.component";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { RouterTestingModule } from "@angular/router/testing";
@@ -13,6 +14,7 @@ describe("AppComponent", () => {
         RouterTestingModule,
         HttpClientTestingModule,
         TranslateModule.forRoot(),
+        MatMenuModule,
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
     }).compileComponents();

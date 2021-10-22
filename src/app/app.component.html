@@ -41,9 +41,14 @@
 
       <span translate>title</span>
 
-      <button mat-icon-button (click)="changeLanguage()">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon>language</mat-icon>
       </button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="changeLang('tr')" translate>tr</button>
+        <button mat-menu-item (click)="changeLang('en')" translate>en</button>
+      </mat-menu>
     </div>
 
     <router-outlet></router-outlet>

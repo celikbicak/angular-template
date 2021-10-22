@@ -22,15 +22,6 @@ export class AppComponent implements OnInit {
     this.translateService.use("tr");
   }
 
-  public navigateToRoute(route: string): void {
-    void this.router.navigate([route]);
-    void this.sidenav.close();
-  }
-
-  public toggleSidenav(): void {
-    void this.sidenav.toggle();
-  }
-
   public ngOnInit(): void {
     this.httpService
       .makeGetRequest(`${environment.apiBaseUrl}/users`)
@@ -63,9 +54,16 @@ export class AppComponent implements OnInit {
     }, 5000);
   }
 
-  public changeLanguage(): void {
-    this.translateService.use(
-      this.translateService.currentLang === "tr" ? "en" : "tr"
-    );
+  public navigateToRoute(route: string): void {
+    void this.router.navigate([route]);
+    void this.sidenav.close();
+  }
+
+  public toggleSidenav(): void {
+    void this.sidenav.toggle();
+  }
+
+  public changeLang(lang: string): void {
+    this.translateService.use(lang);
   }
 }
