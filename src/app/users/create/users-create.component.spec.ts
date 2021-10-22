@@ -1,6 +1,6 @@
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { UsersCreateComponent } from "./users-create.component";
-import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from "@angular/core";
 
 describe("UsersCreateComponent", () => {
   let component: UsersCreateComponent;
@@ -16,7 +16,6 @@ describe("UsersCreateComponent", () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(UsersCreateComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it("should create", () => {

@@ -2,10 +2,10 @@ import {
   HttpClientTestingModule,
   HttpTestingController,
 } from "@angular/common/http/testing";
-import { TestBed } from "@angular/core/testing";
-import { RouterTestingModule } from "@angular/router/testing";
+import { TestData, createTestDatas } from "./http.service.specharness";
 import { HttpService } from "./http.service";
-import { createTestDatas, TestData } from "./http.service.specharness";
+import { RouterTestingModule } from "@angular/router/testing";
+import { TestBed } from "@angular/core/testing";
 
 describe("HttpService", () => {
   let service: HttpService;

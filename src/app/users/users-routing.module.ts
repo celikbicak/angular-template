@@ -1,9 +1,9 @@
-import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { UsersEditComponent } from "./edit/users-edit.component";
-import { UsersListComponent } from "./list/users-list.component";
+import { NgModule } from "@angular/core";
 import { UsersComponent } from "./users.component";
 import { UsersCreateComponent } from "./create/users-create.component";
+import { UsersEditComponent } from "./edit/users-edit.component";
+import { UsersListComponent } from "./list/users-list.component";
 
 const routes: Routes = [
   {
@@ -28,7 +28,7 @@ const routes: Routes = [
         pathMatch: "full",
       },
       {
-        path: "*",
+        path: "**",
         redirectTo: "list",
         pathMatch: "full",
       },

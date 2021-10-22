@@ -6,9 +6,9 @@ import {
 } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { storageFunction } from "storage-function";
-import { StorageConstants } from "../constants";
 import { RequestLog } from "../models";
+import { StorageConstants } from "../constants";
+import { storageFunction } from "storage-function";
 
 @Injectable()
 export class LogInterceptor implements HttpInterceptor {

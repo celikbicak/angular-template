@@ -1,8 +1,8 @@
 import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
+import { FormattedDatePipe } from "./pipes";
 import { FormsModule } from "@angular/forms";
 import { MaterialModule } from "./material/material.module";
-import { FormattedDatePipe } from "./pipes";
+import { NgModule } from "@angular/core";
 
 @NgModule({
   declarations: [FormattedDatePipe],

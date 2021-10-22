@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders, HttpResponse } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
 import { catchError, map } from "rxjs/operators";
 import { HttpErrorHandler } from "../http-error-handler/http-error-handler.service";
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
 
 @Injectable({ providedIn: "root" })
 export class HttpService {
