@@ -1,11 +1,13 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav>
     <div class="sidenav-top-buttons">
-      <button mat-icon-button (click)="sidenav.toggle()">
+      <button mat-icon-button (click)="toggleSidenav()">
         <mat-icon>menu_open</mat-icon>
       </button>
 
-      <button mat-icon-button routerLink=""><mat-icon>home</mat-icon></button>
+      <button mat-icon-button (click)="navigateToRoute('')">
+        <mat-icon>home</mat-icon>
+      </button>
     </div>
     <mat-divider></mat-divider>
 
@@ -14,12 +16,15 @@
         <mat-icon>people_alt</mat-icon> <span class="margin-left">USERS</span>
       </div>
 
-      <mat-list-item routerLink="users" class="list-item">
+      <mat-list-item class="list-item" (click)="navigateToRoute('users/list')">
         <mat-icon class="menu-icon">list</mat-icon
         ><span class="margin-left">Users List</span>
       </mat-list-item>
 
-      <mat-list-item routerLink="users/create" class="list-item">
+      <mat-list-item
+        class="list-item"
+        (click)="navigateToRoute('users/create')"
+      >
         <mat-icon class="menu-icon">add_circle_outline</mat-icon
         ><span class="margin-left">Add User</span>
       </mat-list-item>
@@ -30,7 +35,7 @@
 
   <mat-sidenav-content class="sidenav-content">
     <div class="header">
-      <button mat-icon-button (click)="sidenav.toggle()">
+      <button mat-icon-button (click)="toggleSidenav()">
         <mat-icon>menu</mat-icon>
       </button>
 

@@ -1,5 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { HttpService } from "./shared/services";
+import { MatSidenav } from "@angular/material/sidenav";
+import { Router } from "@angular/router";
 import { TranslateService } from "@ngx-translate/core";
 import { environment } from "src/environments/environment";
 
@@ -9,12 +11,24 @@ import { environment } from "src/environments/environment";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
+  @ViewChild("sidenav") public sidenav: MatSidenav;
+
   constructor(
     private httpService: HttpService,
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    public router: Router
   ) {
     this.translateService.addLangs(["tr", "en"]);
     this.translateService.use("tr");
+  }
+
+  public navigateToRoute(route: string): void {
+    void this.router.navigate([route]);
+    void this.sidenav.close();
+  }
+
+  public toggleSidenav(): void {
+    void this.sidenav.toggle();
   }
 
   public ngOnInit(): void {
