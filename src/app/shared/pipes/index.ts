@@ -1,1 +1,1 @@
-export * from './formatted-date.pipe';
+export * from "./formatted-date.pipe";

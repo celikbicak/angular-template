@@ -1,8 +1,8 @@
-import { HttpErrorResponse } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { throwError, Observable } from 'rxjs';
+import { Observable, throwError } from "rxjs";
+import { HttpErrorResponse } from "@angular/common/http";
+import { Injectable } from "@angular/core";
 
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: "root" })
 export class HttpErrorHandler {
   public handleError(error: HttpErrorResponse): Observable<never> {
     return throwError(`${error.status}: ${error.statusText}`);

@@ -61,11 +61,19 @@
         "@typescript-eslint/no-unsafe-assignment": "off",
         "@typescript-eslint/no-unsafe-member-access": "off",
         "@typescript-eslint/no-unsafe-call": "off",
-        "@typescript-eslint/no-empty-function": "off"
+        "@typescript-eslint/no-empty-function": "off",
+        "@angular-eslint/no-empty-lifecycle-method": "off",
+        "sort-imports": ["error", {
+          "ignoreCase": false,
+          "ignoreDeclarationSort": false,
+          "ignoreMemberSort": false,
+          "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+          "allowSeparatedGroups": false
+        }]
       }
     },
     {
-      "files": ["*.html"],
+      "files": ["*.html", "*.scss"],
       "extends": ["plugin:@angular-eslint/template/recommended", "prettier"],
       "plugins": ["prettier"],
       "rules": {
