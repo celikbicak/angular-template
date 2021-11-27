@@ -23,10 +23,6 @@ export class AppComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    this.httpService
-      .makeGetRequest(`${environment.apiBaseUrl}/users`)
-      .subscribe((response) => console.log("Get users:", response));
-
     return;
 
     setTimeout(() => {

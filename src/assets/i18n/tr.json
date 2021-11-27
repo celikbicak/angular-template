@@ -1,5 +1,8 @@
 {
   "tr": "Türkçe 🇹🇷",
   "en": "English 🇬🇧",
-  "title": "Angular-Template uygulaması çalışıyor! 🇹🇷"
+  "title": "Angular-Template uygulaması çalışıyor! 🇹🇷",
+  "identifier": "kimlik",
+  "name": "ad",
+  "account": "hesap"
 }
