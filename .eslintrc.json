@@ -63,16 +63,7 @@
         "@typescript-eslint/no-unsafe-call": "off",
         "@typescript-eslint/no-empty-function": "off",
         "@angular-eslint/no-empty-lifecycle-method": "off",
-        "sort-imports": [
-          "error",
-          {
-            "ignoreCase": false,
-            "ignoreDeclarationSort": false,
-            "ignoreMemberSort": false,
-            "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
-            "allowSeparatedGroups": false
-          }
-        ]
+        "sort-imports": "off"
       }
     },
     {

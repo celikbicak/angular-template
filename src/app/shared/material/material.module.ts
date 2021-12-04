@@ -1,10 +1,13 @@
+import {
+  MAT_FORM_FIELD_DEFAULT_OPTIONS,
+  MatFormFieldModule,
+} from "@angular/material/form-field";
 import { CommonModule } from "@angular/common";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatExpansionModule } from "@angular/material/expansion";
-import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
@@ -47,5 +50,11 @@ const MaterialComponents = [
 @NgModule({
   imports: [CommonModule, MaterialComponents],
   exports: [MaterialComponents],
+  providers: [
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: { appearance: "outline" },
+    },
+  ],
 })
 export class MaterialModule {}

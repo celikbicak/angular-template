@@ -73,3 +73,22 @@ body {
 }
 
 /*#endregion table*/
+
+/*#region form*/
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/*#endregion form*/
+
+/*#region button*/
+
+.mat-flat-button {
+  width: auto;
+  min-width: 10em !important;
+  text-transform: uppercase;
+}
+
+/*#endregion button*/

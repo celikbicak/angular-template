@@ -1,8 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Table, User } from "../../shared/models";
-import { HttpService } from "../../shared/services";
 import { UserColumnService } from "../user-column.service";
-import { environment } from "../../../environments/environment";
+import { UsersService } from "../users.service";
 
 @Component({
   selector: "app-users-list",
@@ -14,7 +13,7 @@ export class UsersListComponent implements OnInit {
 
   constructor(
     columnService: UserColumnService,
-    private httpService: HttpService
+    private usersService: UsersService
   ) {
     this.table = columnService.getTable();
   }
@@ -24,10 +23,8 @@ export class UsersListComponent implements OnInit {
   }
 
   private populateList(): void {
-    this.httpService
-      .makeGetRequest<User[]>(`${environment.apiBaseUrl}/users`)
-      .subscribe((response) => {
-        this.table.setDatasource(response);
-      });
+    this.usersService.list().subscribe((response) => {
+      this.table.setDatasource(response);
+    });
   }
 }
