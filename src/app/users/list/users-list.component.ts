@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { Table, User } from "../../shared/models";
-import { UserColumnService } from "../user-column.service";
+import { User } from "../../shared/models";
+import { Table } from "../../shared/models/table";
+import { UserTableService } from "../user-table.service";
 import { UsersService } from "../users.service";
 
 @Component({
@@ -12,10 +13,10 @@ export class UsersListComponent implements OnInit {
   public table: Table<User>;
 
   constructor(
-    columnService: UserColumnService,
+    userTableService: UserTableService,
     private usersService: UsersService
   ) {
-    this.table = columnService.getTable();
+    this.table = userTableService.getTable();
   }
 
   public ngOnInit(): void {

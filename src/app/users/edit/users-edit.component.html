@@ -1,5 +1,5 @@
 <div *ngIf="user" class="edit-user-page">
-  <h1>{{ user.id }}r</h1>
+  <h1>{{ user.id }}</h1>
 
   <form [formGroup]="form" class="form-group">
     <mat-form-field>
@@ -12,6 +12,10 @@
       <input matInput formControlName="account" />
     </mat-form-field>
   </form>
-  <button mat-flat-button color="warn" class="button">cancel</button>
-  <button mat-flat-button color="primary" class="button">save</button>
+  <button mat-flat-button color="warn" class="button" (click)="cancel()">
+    cancel
+  </button>
+  <button mat-flat-button color="primary" class="button" (click)="save()">
+    save
+  </button>
 </div>

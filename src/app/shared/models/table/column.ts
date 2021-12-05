@@ -1,4 +1,4 @@
-export class TableColumn<T> {
+export class Column<T> {
   public readonly columnDef: string;
   public readonly key: string;
   public readonly cell: (element: T) => string;

@@ -13,6 +13,10 @@
       mat-header-row
       *matHeaderRowDef="table.displayedColumns; sticky: true"
     ></tr>
-    <tr mat-row *matRowDef="let row; columns: table.displayedColumns"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: table.displayedColumns"
+      [routerLink]="['../edit', row.id]"
+    ></tr>
   </table>
 </div>

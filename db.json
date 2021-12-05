@@ -62,19 +62,14 @@
   ],
   "users": [
     {
-      "id": 1,
+      "id": "F99E8902-A026-4D52-8A05-92BF55E86004",
       "name": "Samet ÇELİKBIÇAK",
       "github": "https://github.com/sametcelikbicak"
     },
     {
-      "id": 2,
+      "id": "F56BD29C-298B-4FFF-8D2C-C4E2FC5128FE",
       "name": "Caner BEKTAŞ",
       "github": "https://github.com/canerbektas"
-    },
-    {
-      "id": "12345",
-      "name": "ali",
-      "github": "www.ali.com.tr"
     }
   ],
   "datas": [
