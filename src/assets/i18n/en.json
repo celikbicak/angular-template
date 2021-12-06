@@ -1,5 +1,15 @@
 {
   "tr": "Türkçe 🇹🇷",
   "en": "English 🇬🇧",
-  "title": "Angular-Template app is running! 🇬🇧"
+  "title": "Angular-Template app is running! 🇬🇧",
+  "identifier": "identifier",
+  "name": "name",
+  "account": "account",
+  "users": "users",
+  "list": "List",
+  "add": "Add",
+  "cancel": "cancel",
+  "save": "save",
+  "create": "create"
+
 }

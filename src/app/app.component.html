@@ -1,5 +1,5 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav>
+  <mat-sidenav #sidenav class="sidenav">
     <div class="sidenav-top-buttons">
       <button mat-icon-button (click)="toggleSidenav()">
         <mat-icon>menu_open</mat-icon>
@@ -13,20 +13,21 @@
 
     <mat-list class="menu-list">
       <div mat-subheader>
-        <mat-icon>people_alt</mat-icon> <span class="margin-left">USERS</span>
+        <mat-icon>people_alt</mat-icon>
+        <span class="margin-left" translate>users</span>
       </div>
 
       <mat-list-item class="list-item" (click)="navigateToRoute('users/list')">
         <mat-icon class="menu-icon">list</mat-icon
-        ><span class="margin-left">Users List</span>
+        ><span class="margin-left" translate>list</span>
       </mat-list-item>
 
       <mat-list-item
         class="list-item"
         (click)="navigateToRoute('users/create')"
       >
-        <mat-icon class="menu-icon">add_circle_outline</mat-icon
-        ><span class="margin-left">Add User</span>
+        <mat-icon class="menu-icon">person_add_alt_1</mat-icon>
+        <span class="margin-left" translate>add</span>
       </mat-list-item>
 
       <mat-divider></mat-divider>

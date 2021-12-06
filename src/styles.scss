@@ -12,3 +12,83 @@ body {
 .margin-left {
   margin-left: 0.5em;
 }
+
+/*#region table*/
+.common-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  th,
+  td {
+    overflow: hidden;
+    width: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 1em;
+  }
+
+  th.mat-header-cell {
+    font-weight: Bold;
+    font-size: 14px;
+    letter-spacing: 0.84px;
+    text-transform: uppercase;
+  }
+
+  th.mat-header-cell:first-of-type,
+  td.mat-cell:first-of-type {
+    padding-left: 3.5em;
+  }
+
+  th.mat-header-cell:last-of-type,
+  td.mat-cell:last-of-type {
+    padding-right: 3.5em !important;
+  }
+
+  .mat-row:nth-child(even) {
+    background-color: rgba(63, 66, 71, 0.05);
+  }
+
+  .mat-row:nth-child(odd) {
+    background-color: rgba(63, 66, 71, 0.1);
+  }
+
+  .mat-row {
+    height: 4em !important;
+    cursor: pointer;
+
+    button {
+      visibility: collapse;
+    }
+
+    &:hover {
+      background-color: silver;
+      font-weight: bold;
+
+      button {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+/*#endregion table*/
+
+/*#region form*/
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/*#endregion form*/
+
+/*#region button*/
+
+.mat-flat-button {
+  width: auto;
+  min-width: 10em !important;
+  text-transform: uppercase;
+}
+
+/*#endregion button*/
