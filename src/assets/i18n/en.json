@@ -4,5 +4,12 @@
   "title": "Angular-Template app is running! 🇬🇧",
   "identifier": "identifier",
   "name": "name",
-  "account": "account"
+  "account": "account",
+  "users": "users",
+  "list": "List",
+  "add": "Add",
+  "cancel": "cancel",
+  "save": "save",
+  "create": "create"
+
 }

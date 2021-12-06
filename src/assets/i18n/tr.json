@@ -4,5 +4,12 @@
   "title": "Angular-Template uygulaması çalışıyor! 🇹🇷",
   "identifier": "kimlik",
   "name": "ad",
-  "account": "hesap"
+  "account": "hesap",
+  "users": "kullanıcılar",
+  "list": "liste",
+  "add": "ekle",
+  "cancel": "iptal",
+  "save": "kaydet",
+  "create": "oluştur"
+
 }
