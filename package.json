@@ -29,7 +29,7 @@
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
     "enum2array": "^1.1.14",
-    "json-server": "^0.16.3",
+    "json-server": "^0.17.0",
     "moment": "^2.29.1",
     "rxjs": "~7.5.5",
     "storage-function": "^2.1.5",
